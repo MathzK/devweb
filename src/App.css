@@ -1,42 +1,91 @@
 #root {
-  max-width: 1280px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #0f172a;
+  box-sizing: border-box;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+  height: 5em;
+  margin: 1em auto;
+  transition: filter 300ms, transform 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 1.5em #3b82f6aa);
+  transform: scale(1.05);
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  filter: drop-shadow(0 0 2em #196980);
 }
 
 .card {
+  background-color: #1e293b;
   padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: 1.5em auto;
+  max-width: 90%;
+  width: 100%;
+  color: #e0f2ff;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  color: #164175;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .read-the-docs {
-  color: #888;
+  color: #94a3b8;
+  font-size: 0.9em;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  background-color: #1e293b;
+  color: #3b82f6;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #334155;
+  color: #0b3360;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .card {
+    padding: 1.2em;
+  }
+
+  button, input {
+    width: 100%;
+    margin-top: 0.5em;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
 }

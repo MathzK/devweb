@@ -57,7 +57,7 @@ export default function CepSearch() {
 
 const styles = {
   container: {
-    backgroundColor: '#e0f7fa',
+    backgroundColor: '#ffff',
     padding: '1rem',
     borderRadius: '8px',
     maxWidth: '400px',
